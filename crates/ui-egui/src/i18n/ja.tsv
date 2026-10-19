@@ -4859,3 +4859,28 @@ lighting	Light	ライト
 	Minimum	最小
 	Justification	文字組み
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	ファイルの変数とデータセットは読み込まれませんでした (変数: {variables}、データセット: {data_sets})。変数パネルには表示されません
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	カット輪郭を追加
+	Align Bottom	下揃え
+	Align Centers Horizontally	中心を水平方向に揃える
+	Align Centers Vertically	中心を垂直方向に揃える
+	Align Left	左揃え
+	Align Right	右揃え
+	Align Top	上揃え
+	Align and Distribute	整列と分布
+	Break Apart	分解
+	Center to Page	ページの中央に配置
+	Color Palette	カラーパレット
+	Combine	結合
+	Convert to Curves	カーブに変換
+	Distribute Bottom	下端を分布
+	Distribute Centers Horizontally	中心を水平方向に分布
+	Distribute Centers Vertically	中心を垂直方向に分布
+	Distribute Left	左端を分布
+	Distribute Right	右端を分布
+	Distribute Top	上端を分布
+	Print Shop	印刷所
+	Step and Repeat	ステップ＆リピート
+	Click: fill · Right-click: stroke	クリック：塗り · 右クリック：線
+	Add Cut Contour…	カット輪郭を追加…
+	Step and Repeat…	ステップ＆リピート…

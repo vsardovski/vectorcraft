@@ -4819,3 +4819,28 @@ lighting	Light	Luce
 	Minimum	Minimo
 	Justification	Giustificazione
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	le variabili e i set di dati del file non sono stati letti (variabili: {variables}, set di dati: {data_sets}): il pannello Variabili non li elenca
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Aggiungi contorno di taglio
+	Align Bottom	Allinea in basso
+	Align Centers Horizontally	Allinea centri orizzontalmente
+	Align Centers Vertically	Allinea centri verticalmente
+	Align Left	Allinea a sinistra
+	Align Right	Allinea a destra
+	Align Top	Allinea in alto
+	Align and Distribute	Allinea e distribuisci
+	Break Apart	Separa
+	Center to Page	Centra nella pagina
+	Color Palette	Tavolozza colori
+	Combine	Combina
+	Convert to Curves	Converti in curve
+	Distribute Bottom	Distribuisci in basso
+	Distribute Centers Horizontally	Distribuisci centri orizzontalmente
+	Distribute Centers Vertically	Distribuisci centri verticalmente
+	Distribute Left	Distribuisci a sinistra
+	Distribute Right	Distribuisci a destra
+	Distribute Top	Distribuisci in alto
+	Print Shop	Tipografia
+	Step and Repeat	Passo e ripetizione
+	Click: fill · Right-click: stroke	Clic: riempimento · Clic destro: traccia
+	Add Cut Contour…	Aggiungi contorno di taglio…
+	Step and Repeat…	Passo e ripetizione…

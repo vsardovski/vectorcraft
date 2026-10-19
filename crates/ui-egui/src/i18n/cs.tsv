@@ -5205,3 +5205,28 @@ mark-style	Japanese	Japonské
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum nesmí překročit požadovanou hodnotu ani požadovaná hodnota maximum.
 	Justification	Zarovnání do bloku
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	proměnné a sady dat souboru nebyly načteny (proměnné: {variables}, sady dat: {data_sets}): panel Proměnné je nezobrazuje
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Přidat řezací kontur
+	Align Bottom	Zarovnat dolů
+	Align Centers Horizontally	Zarovnat středy vodorovně
+	Align Centers Vertically	Zarovnat středy svisle
+	Align Left	Zarovnat doleva
+	Align Right	Zarovnat doprava
+	Align Top	Zarovnat nahoru
+	Align and Distribute	Zarovnat a rozmístit
+	Break Apart	Rozdělit
+	Center to Page	Vystředit na stránku
+	Color Palette	Paleta barev
+	Combine	Kombinovat
+	Convert to Curves	Převést na křivky
+	Distribute Bottom	Rozmístit dolní okraje
+	Distribute Centers Horizontally	Rozmístit středy vodorovně
+	Distribute Centers Vertically	Rozmístit středy svisle
+	Distribute Left	Rozmístit levé okraje
+	Distribute Right	Rozmístit pravé okraje
+	Distribute Top	Rozmístit horní okraje
+	Print Shop	Tiskárna
+	Step and Repeat	Krok a opakování
+	Click: fill · Right-click: stroke	Klepnutí: výplň · Pravé klepnutí: tah
+	Add Cut Contour…	Přidat řezací kontur…
+	Step and Repeat…	Krok a opakování…

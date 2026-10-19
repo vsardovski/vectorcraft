@@ -4815,3 +4815,28 @@ lighting	Light	Свет
 	Minimum	Минимум
 	Justification	Выключка
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	переменные и наборы данных файла не прочитаны (переменных: {variables}, наборов данных: {data_sets}): панель «Переменные» их не показывает
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Добавить контур резки
+	Align Bottom	Выровнять по нижнему краю
+	Align Centers Horizontally	Выровнять центры по горизонтали
+	Align Centers Vertically	Выровнять центры по вертикали
+	Align Left	Выровнять по левому краю
+	Align Right	Выровнять по правому краю
+	Align Top	Выровнять по верхнему краю
+	Align and Distribute	Выравнивание и распределение
+	Break Apart	Разъединить
+	Center to Page	Центрировать на странице
+	Color Palette	Цветовая палитра
+	Combine	Объединить
+	Convert to Curves	Преобразовать в кривые
+	Distribute Bottom	Распределить по нижнему краю
+	Distribute Centers Horizontally	Распределить центры по горизонтали
+	Distribute Centers Vertically	Распределить центры по вертикали
+	Distribute Left	Распределить по левому краю
+	Distribute Right	Распределить по правому краю
+	Distribute Top	Распределить по верхнему краю
+	Print Shop	Типография
+	Step and Repeat	Шаг и повтор
+	Click: fill · Right-click: stroke	Щелчок: заливка · Правый щелчок: обводка
+	Add Cut Contour…	Добавить контур резки…
+	Step and Repeat…	Шаг и повтор…

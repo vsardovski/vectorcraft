@@ -1061,9 +1061,12 @@ mod tests {
 
     #[test]
     fn presets_are_the_defaults() {
-        for p in PRESETS {
+        // Every set but Print Shop is the registry defaults; Print Shop's own test is in
+        // `tests_printshop`.
+        for p in PRESETS.iter().filter(|p| **p != PRINT_SHOP) {
             assert_eq!(preset(p), Some(BTreeMap::new()));
         }
+        assert!(preset(PRINT_SHOP).is_some_and(|o| !o.is_empty()));
         assert!(preset("Nope").is_none());
     }
 

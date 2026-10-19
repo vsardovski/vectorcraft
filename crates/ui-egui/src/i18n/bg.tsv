@@ -5170,3 +5170,36 @@ theme	Appearance	Външен вид
 	Minimum must not exceed Desired, nor Desired Maximum.	Минималната стойност не може да надвишава желаната, нито желаната – максималната.
 	Justification	Подравняване
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	променливите и наборите от данни на файла не бяха прочетени (променливи: {variables}, набори от данни: {data_sets}): панелът „Променливи“ не ги показва
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Добавяне на контур за рязане
+	Align Bottom	Подравняване отдолу
+	Align Centers Horizontally	Подравняване на центровете хоризонтално
+	Align Centers Vertically	Подравняване на центровете вертикално
+	Align Left	Подравняване вляво
+	Align Right	Подравняване вдясно
+	Align Top	Подравняване отгоре
+	Align and Distribute	Подравняване и разпределение
+	Break Apart	Разделяне
+	Center to Page	Центриране в страницата
+	Color Palette	Цветова палитра
+	Combine	Комбиниране
+	Convert to Curves	Преобразуване в криви
+	Distribute Bottom	Разпределяне отдолу
+	Distribute Centers Horizontally	Разпределяне на центровете хоризонтално
+	Distribute Centers Vertically	Разпределяне на центровете вертикално
+	Distribute Left	Разпределяне вляво
+	Distribute Right	Разпределяне вдясно
+	Distribute Top	Разпределяне отгоре
+	Print Shop	Печатница
+	Step and Repeat	Стъпка и повторение
+	Click: fill · Right-click: stroke	Клик: запълване · Десен клик: щрих
+	Add Cut Contour…	Добавяне на контур за рязане…
+	Step and Repeat…	Стъпка и повторение…
+	Horizontal Distance:	Хоризонтално разстояние:
+	Horizontal Direction:	Хоризонтална посока:
+	Vertical Distance:	Вертикално разстояние:
+	Vertical Direction:	Вертикална посока:
+	No Offset	Без отстъп
+	Spacing Between Objects	Разстояние между обектите
+	Along the Outline	По контура
+	Box	Правоъгълник

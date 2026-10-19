@@ -5157,3 +5157,28 @@ effect	Points	Σημεία
 	Minimum must not exceed Desired, nor Desired Maximum.	Το ελάχιστο δεν πρέπει να υπερβαίνει το επιθυμητό, ούτε το επιθυμητό το μέγιστο.
 	Justification	Πλήρης στοίχιση
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	οι μεταβλητές και τα σύνολα δεδομένων του αρχείου δεν διαβάστηκαν (μεταβλητές: {variables}, σύνολα δεδομένων: {data_sets}): ο πίνακας Μεταβλητές δεν τα εμφανίζει
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Προσθήκη περιγράμματος κοπής
+	Align Bottom	Στοίχιση κάτω
+	Align Centers Horizontally	Στοίχιση κέντρων οριζόντια
+	Align Centers Vertically	Στοίχιση κέντρων κάθετα
+	Align Left	Στοίχιση αριστερά
+	Align Right	Στοίχιση δεξιά
+	Align Top	Στοίχιση πάνω
+	Align and Distribute	Στοίχιση και κατανομή
+	Break Apart	Διάσπαση
+	Center to Page	Κεντράρισμα στη σελίδα
+	Color Palette	Παλέτα χρωμάτων
+	Combine	Συνδυασμός
+	Convert to Curves	Μετατροπή σε καμπύλες
+	Distribute Bottom	Κατανομή κάτω
+	Distribute Centers Horizontally	Κατανομή κέντρων οριζόντια
+	Distribute Centers Vertically	Κατανομή κέντρων κάθετα
+	Distribute Left	Κατανομή αριστερά
+	Distribute Right	Κατανομή δεξιά
+	Distribute Top	Κατανομή πάνω
+	Print Shop	Τυπογραφείο
+	Step and Repeat	Βήμα και επανάληψη
+	Click: fill · Right-click: stroke	Κλικ: γέμισμα · Δεξί κλικ: πινελιά
+	Add Cut Contour…	Προσθήκη περιγράμματος κοπής…
+	Step and Repeat…	Βήμα και επανάληψη…

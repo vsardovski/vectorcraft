@@ -5169,3 +5169,28 @@ mark-style	Japanese	Japanilainen
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimi ei saa ylittää haluttua arvoa eikä haluttu arvo maksimia.
 	Justification	Tasaus
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	tiedoston muuttujia ja tietojoukkoja ei luettu (muuttujia: {variables}, tietojoukkoja: {data_sets}): Muuttujat-paneeli ei näytä niitä
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Lisää leikkausääriviiva
+	Align Bottom	Tasaa alareunat
+	Align Centers Horizontally	Tasaa keskikohdat vaakasuunnassa
+	Align Centers Vertically	Tasaa keskikohdat pystysuunnassa
+	Align Left	Tasaa vasemmalle
+	Align Right	Tasaa oikealle
+	Align Top	Tasaa yläreunat
+	Align and Distribute	Tasaa ja jaa
+	Break Apart	Pura
+	Center to Page	Keskitä sivulle
+	Color Palette	Väripaletti
+	Combine	Yhdistä
+	Convert to Curves	Muunna käyriksi
+	Distribute Bottom	Jaa alareunat
+	Distribute Centers Horizontally	Jaa keskikohdat vaakasuunnassa
+	Distribute Centers Vertically	Jaa keskikohdat pystysuunnassa
+	Distribute Left	Jaa vasemmat reunat
+	Distribute Right	Jaa oikeat reunat
+	Distribute Top	Jaa yläreunat
+	Print Shop	Painotalo
+	Step and Repeat	Askella ja toista
+	Click: fill · Right-click: stroke	Napsautus: täyttö · Oikea napsautus: viiva
+	Add Cut Contour…	Lisää leikkausääriviiva…
+	Step and Repeat…	Askella ja toista…

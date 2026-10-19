@@ -4781,3 +4781,28 @@ effect	Regular	Regelmäßig
 	Minimum	Minimum
 	Justification	Abstände
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	die Variablen und Datensätze der Datei wurden nicht gelesen (Variablen: {variables}, Datensätze: {data_sets}): Das Bedienfeld „Variablen“ listet sie nicht auf
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Schneidekontur hinzufügen
+	Align Bottom	Unten ausrichten
+	Align Centers Horizontally	Mittelpunkte horizontal ausrichten
+	Align Centers Vertically	Mittelpunkte vertikal ausrichten
+	Align Left	Links ausrichten
+	Align Right	Rechts ausrichten
+	Align Top	Oben ausrichten
+	Align and Distribute	Ausrichten und verteilen
+	Break Apart	Aufbrechen
+	Center to Page	Auf Seite zentrieren
+	Color Palette	Farbpalette
+	Combine	Kombinieren
+	Convert to Curves	In Kurven umwandeln
+	Distribute Bottom	Unten verteilen
+	Distribute Centers Horizontally	Mittelpunkte horizontal verteilen
+	Distribute Centers Vertically	Mittelpunkte vertikal verteilen
+	Distribute Left	Links verteilen
+	Distribute Right	Rechts verteilen
+	Distribute Top	Oben verteilen
+	Print Shop	Druckerei
+	Step and Repeat	Schritt und Wiederholung
+	Click: fill · Right-click: stroke	Klick: Fläche · Rechtsklick: Kontur
+	Add Cut Contour…	Schneidekontur hinzufügen…
+	Step and Repeat…	Schritt und Wiederholung…

@@ -5122,3 +5122,28 @@ mark-style	Japanese	Japonesas
 	Minimum must not exceed Desired, nor Desired Maximum.	O mínimo não pode passar do desejado, nem o desejado do máximo.
 	Justification	Justificação
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	as variáveis e os conjuntos de dados do arquivo não foram lidos (variáveis: {variables}, conjuntos de dados: {data_sets}): o painel Variáveis não os lista
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Adicionar contorno de corte
+	Align Bottom	Alinhar embaixo
+	Align Centers Horizontally	Alinhar centros horizontalmente
+	Align Centers Vertically	Alinhar centros verticalmente
+	Align Left	Alinhar à esquerda
+	Align Right	Alinhar à direita
+	Align Top	Alinhar em cima
+	Align and Distribute	Alinhar e distribuir
+	Break Apart	Separar
+	Center to Page	Centralizar na página
+	Color Palette	Paleta de cores
+	Combine	Combinar
+	Convert to Curves	Converter em curvas
+	Distribute Bottom	Distribuir embaixo
+	Distribute Centers Horizontally	Distribuir centros horizontalmente
+	Distribute Centers Vertically	Distribuir centros verticalmente
+	Distribute Left	Distribuir à esquerda
+	Distribute Right	Distribuir à direita
+	Distribute Top	Distribuir em cima
+	Print Shop	Gráfica
+	Step and Repeat	Passo e repetição
+	Click: fill · Right-click: stroke	Clique: preenchimento · Clique direito: traçado
+	Add Cut Contour…	Adicionar contorno de corte…
+	Step and Repeat…	Passo e repetição…

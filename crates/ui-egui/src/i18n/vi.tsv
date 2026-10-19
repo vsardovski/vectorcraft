@@ -4799,3 +4799,28 @@ theme	Appearance	Giao diện
 	Minimum	Tối thiểu
 	Justification	Căn đều
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	các biến và tập dữ liệu của tệp chưa được đọc (biến: {variables}, tập dữ liệu: {data_sets}): bảng Biến không liệt kê chúng
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Thêm đường cắt
+	Align Bottom	Căn dưới
+	Align Centers Horizontally	Căn giữa theo chiều ngang
+	Align Centers Vertically	Căn giữa theo chiều dọc
+	Align Left	Căn trái
+	Align Right	Căn phải
+	Align Top	Căn trên
+	Align and Distribute	Căn chỉnh và phân bố
+	Break Apart	Tách rời
+	Center to Page	Căn giữa trang
+	Color Palette	Bảng màu
+	Combine	Kết hợp
+	Convert to Curves	Chuyển thành đường cong
+	Distribute Bottom	Phân bố cạnh dưới
+	Distribute Centers Horizontally	Phân bố tâm theo chiều ngang
+	Distribute Centers Vertically	Phân bố tâm theo chiều dọc
+	Distribute Left	Phân bố cạnh trái
+	Distribute Right	Phân bố cạnh phải
+	Distribute Top	Phân bố cạnh trên
+	Print Shop	Xưởng in
+	Step and Repeat	Bước và lặp lại
+	Click: fill · Right-click: stroke	Nhấp: tô · Nhấp phải: nét
+	Add Cut Contour…	Thêm đường cắt…
+	Step and Repeat…	Bước và lặp lại…

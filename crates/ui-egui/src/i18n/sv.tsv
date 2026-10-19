@@ -5161,3 +5161,28 @@ theme	Appearance	Utseende
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum får inte överstiga Önskat, och Önskat inte Maximum.
 	Justification	Justering
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	filens variabler och datauppsättningar lästes inte (variabler: {variables}, datauppsättningar: {data_sets}): panelen Variabler visar dem inte
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Lägg till skärkontur
+	Align Bottom	Justera nederkant
+	Align Centers Horizontally	Justera mittpunkter vågrätt
+	Align Centers Vertically	Justera mittpunkter lodrätt
+	Align Left	Vänsterjustera
+	Align Right	Högerjustera
+	Align Top	Justera överkant
+	Align and Distribute	Justera och fördela
+	Break Apart	Dela upp
+	Center to Page	Centrera på sidan
+	Color Palette	Färgpalett
+	Combine	Kombinera
+	Convert to Curves	Konvertera till kurvor
+	Distribute Bottom	Fördela nederkant
+	Distribute Centers Horizontally	Fördela mittpunkter vågrätt
+	Distribute Centers Vertically	Fördela mittpunkter lodrätt
+	Distribute Left	Fördela vänsterkant
+	Distribute Right	Fördela högerkant
+	Distribute Top	Fördela överkant
+	Print Shop	Tryckeri
+	Step and Repeat	Steg och upprepa
+	Click: fill · Right-click: stroke	Klick: fyllning · Högerklick: linje
+	Add Cut Contour…	Lägg till skärkontur…
+	Step and Repeat…	Steg och upprepa…

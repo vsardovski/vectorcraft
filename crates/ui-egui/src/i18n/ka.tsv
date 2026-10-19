@@ -5112,3 +5112,28 @@ imageTrace	Outline	კონტური
 @msg	its zlib compression is damaged	მისი zlib შეკუმშვა დაზიანებულია
 @msg	its Zstandard compression is damaged	მისი Zstandard შეკუმშვა დაზიანებულია
 @msg	it decompresses to more than {_1} MB	გაშლისას {_1} MB-ს აღემატება
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	საჭრელი კონტურის დამატება
+	Align Bottom	ქვემოთ გასწორება
+	Align Centers Horizontally	ცენტრების ჰორიზონტალური გასწორება
+	Align Centers Vertically	ცენტრების ვერტიკალური გასწორება
+	Align Left	მარცხნივ გასწორება
+	Align Right	მარჯვნივ გასწორება
+	Align Top	ზემოთ გასწორება
+	Align and Distribute	გასწორება და განაწილება
+	Break Apart	დაშლა
+	Center to Page	გვერდზე ცენტრირება
+	Color Palette	ფერების პალიტრა
+	Combine	გაერთიანება
+	Convert to Curves	მრუდებად გარდაქმნა
+	Distribute Bottom	ქვედა კიდეების განაწილება
+	Distribute Centers Horizontally	ცენტრების ჰორიზონტალური განაწილება
+	Distribute Centers Vertically	ცენტრების ვერტიკალური განაწილება
+	Distribute Left	მარცხენა კიდეების განაწილება
+	Distribute Right	მარჯვენა კიდეების განაწილება
+	Distribute Top	ზედა კიდეების განაწილება
+	Print Shop	სტამბა
+	Step and Repeat	ბიჯი და გამეორება
+	Click: fill · Right-click: stroke	დაწკაპუნება: შევსება · მარჯვენა დაწკაპუნება: შტრიხი
+	Add Cut Contour…	საჭრელი კონტურის დამატება…
+	Step and Repeat…	ბიჯი და გამეორება…

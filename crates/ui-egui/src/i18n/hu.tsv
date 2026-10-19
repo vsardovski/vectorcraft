@@ -5191,3 +5191,28 @@ imageTrace	Outline	Körvonal
 	Minimum must not exceed Desired, nor Desired Maximum.	A minimum nem haladhatja meg a kívánt értéket, sem a kívánt érték a maximumot.
 	Justification	Sorkizárás
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	a fájl változói és adatkészletei nem lettek beolvasva (változók: {variables}, adatkészletek: {data_sets}): a Változók panel nem listázza őket
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Vágókontúr hozzáadása
+	Align Bottom	Igazítás alulra
+	Align Centers Horizontally	Középpontok vízszintes igazítása
+	Align Centers Vertically	Középpontok függőleges igazítása
+	Align Left	Igazítás balra
+	Align Right	Igazítás jobbra
+	Align Top	Igazítás felülre
+	Align and Distribute	Igazítás és elosztás
+	Break Apart	Szétbontás
+	Center to Page	Középre igazítás az oldalon
+	Color Palette	Színpaletta
+	Combine	Egyesítés
+	Convert to Curves	Átalakítás görbékké
+	Distribute Bottom	Elosztás alul
+	Distribute Centers Horizontally	Középpontok vízszintes elosztása
+	Distribute Centers Vertically	Középpontok függőleges elosztása
+	Distribute Left	Elosztás balra
+	Distribute Right	Elosztás jobbra
+	Distribute Top	Elosztás felül
+	Print Shop	Nyomda
+	Step and Repeat	Lépés és ismétlés
+	Click: fill · Right-click: stroke	Kattintás: kitöltés · Jobb kattintás: körvonal
+	Add Cut Contour…	Vágókontúr hozzáadása…
+	Step and Repeat…	Lépés és ismétlés…

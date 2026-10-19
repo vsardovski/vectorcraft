@@ -5041,3 +5041,28 @@ lighting	Light	光源
 	Minimum	最小值
 	Justification	对齐设置
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	文件的变量和数据集未被读取（变量：{variables}，数据集：{data_sets}）：“变量”面板不会列出它们
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	添加切割轮廓
+	Align Bottom	底部对齐
+	Align Centers Horizontally	水平对齐中心
+	Align Centers Vertically	垂直对齐中心
+	Align Left	左对齐
+	Align Right	右对齐
+	Align Top	顶部对齐
+	Align and Distribute	对齐与分布
+	Break Apart	拆分
+	Center to Page	在页面居中
+	Color Palette	调色板
+	Combine	合并
+	Convert to Curves	转换为曲线
+	Distribute Bottom	底部分布
+	Distribute Centers Horizontally	水平分布中心
+	Distribute Centers Vertically	垂直分布中心
+	Distribute Left	左分布
+	Distribute Right	右分布
+	Distribute Top	顶部分布
+	Print Shop	印刷店
+	Step and Repeat	步长和重复
+	Click: fill · Right-click: stroke	单击：填充 · 右键单击：描边
+	Add Cut Contour…	添加切割轮廓…
+	Step and Repeat…	步长和重复…

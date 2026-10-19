@@ -5204,3 +5204,28 @@ theme	Appearance	Apparence
 	Minimum must not exceed Desired, nor Desired Maximum.	Le minimum ne doit pas dépasser la valeur optimale, ni la valeur optimale le maximum.
 	Justification	Justification
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	les variables et jeux de données du fichier n’ont pas été lus (variables : {variables}, jeux de données : {data_sets}) : le panneau Variables ne les affiche pas
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Ajouter un contour de découpe
+	Align Bottom	Aligner en bas
+	Align Centers Horizontally	Aligner les centres horizontalement
+	Align Centers Vertically	Aligner les centres verticalement
+	Align Left	Aligner à gauche
+	Align Right	Aligner à droite
+	Align Top	Aligner en haut
+	Align and Distribute	Aligner et répartir
+	Break Apart	Désassembler
+	Center to Page	Centrer sur la page
+	Color Palette	Palette de couleurs
+	Combine	Combiner
+	Convert to Curves	Convertir en courbes
+	Distribute Bottom	Répartir en bas
+	Distribute Centers Horizontally	Répartir les centres horizontalement
+	Distribute Centers Vertically	Répartir les centres verticalement
+	Distribute Left	Répartir à gauche
+	Distribute Right	Répartir à droite
+	Distribute Top	Répartir en haut
+	Print Shop	Imprimerie
+	Step and Repeat	Pas et répétition
+	Click: fill · Right-click: stroke	Clic : fond · Clic droit : contour
+	Add Cut Contour…	Ajouter un contour de découpe…
+	Step and Repeat…	Pas et répétition…

@@ -5057,3 +5057,28 @@ mark-style	Japanese	Japońskie
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum nie może przekraczać wartości optymalnej, a wartość optymalna maksimum.
 	Justification	Justowanie
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	zmienne i zestawy danych pliku nie zostały wczytane (zmienne: {variables}, zestawy danych: {data_sets}): panel Zmienne ich nie wyświetla
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Dodaj kontur cięcia
+	Align Bottom	Wyrównaj do dołu
+	Align Centers Horizontally	Wyrównaj środki w poziomie
+	Align Centers Vertically	Wyrównaj środki w pionie
+	Align Left	Wyrównaj do lewej
+	Align Right	Wyrównaj do prawej
+	Align Top	Wyrównaj do góry
+	Align and Distribute	Wyrównaj i rozmieść
+	Break Apart	Rozdziel
+	Center to Page	Wyśrodkuj na stronie
+	Color Palette	Paleta kolorów
+	Combine	Połącz
+	Convert to Curves	Konwertuj na krzywe
+	Distribute Bottom	Rozmieść dolne krawędzie
+	Distribute Centers Horizontally	Rozmieść środki w poziomie
+	Distribute Centers Vertically	Rozmieść środki w pionie
+	Distribute Left	Rozmieść lewe krawędzie
+	Distribute Right	Rozmieść prawe krawędzie
+	Distribute Top	Rozmieść górne krawędzie
+	Print Shop	Drukarnia
+	Step and Repeat	Krok i powtórz
+	Click: fill · Right-click: stroke	Kliknięcie: wypełnienie · Prawy przycisk: obrys
+	Add Cut Contour…	Dodaj kontur cięcia…
+	Step and Repeat…	Krok i powtórz…

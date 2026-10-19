@@ -4782,3 +4782,28 @@ lighting	Light	광원
 	Minimum	최소
 	Justification	양끝 맞춤
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	파일의 변수와 데이터 세트를 읽지 않았습니다(변수: {variables}, 데이터 세트: {data_sets}). 변수 패널에 표시되지 않습니다
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	재단 윤곽선 추가
+	Align Bottom	아래쪽 정렬
+	Align Centers Horizontally	중심 가로 정렬
+	Align Centers Vertically	중심 세로 정렬
+	Align Left	왼쪽 정렬
+	Align Right	오른쪽 정렬
+	Align Top	위쪽 정렬
+	Align and Distribute	정렬 및 분포
+	Break Apart	분리
+	Center to Page	페이지 중앙에 배치
+	Color Palette	색상 팔레트
+	Combine	결합
+	Convert to Curves	곡선으로 변환
+	Distribute Bottom	아래쪽 분포
+	Distribute Centers Horizontally	중심 가로 분포
+	Distribute Centers Vertically	중심 세로 분포
+	Distribute Left	왼쪽 분포
+	Distribute Right	오른쪽 분포
+	Distribute Top	위쪽 분포
+	Print Shop	인쇄소
+	Step and Repeat	단계 및 반복
+	Click: fill · Right-click: stroke	클릭: 칠 · 오른쪽 클릭: 획
+	Add Cut Contour…	재단 윤곽선 추가…
+	Step and Repeat…	단계 및 반복…

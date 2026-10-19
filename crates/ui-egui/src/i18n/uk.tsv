@@ -4799,3 +4799,28 @@ lighting	Light	Світло
 	Minimum	Мінімум
 	Justification	Вирівнювання за шириною
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	змінні та набори даних файлу не прочитано (змінних: {variables}, наборів даних: {data_sets}): панель «Змінні» їх не показує
+# Print Shop edition (2026-10): drafted with AI assistance from the English meaning; not yet reviewed by a native speaker.
+	Add Cut Contour	Додати контур різання
+	Align Bottom	Вирівняти за нижнім краєм
+	Align Centers Horizontally	Вирівняти центри по горизонталі
+	Align Centers Vertically	Вирівняти центри по вертикалі
+	Align Left	Вирівняти за лівим краєм
+	Align Right	Вирівняти за правим краєм
+	Align Top	Вирівняти за верхнім краєм
+	Align and Distribute	Вирівнювання та розподіл
+	Break Apart	Роз'єднати
+	Center to Page	Центрувати на сторінці
+	Color Palette	Палітра кольорів
+	Combine	Об'єднати
+	Convert to Curves	Перетворити на криві
+	Distribute Bottom	Розподілити за нижнім краєм
+	Distribute Centers Horizontally	Розподілити центри по горизонталі
+	Distribute Centers Vertically	Розподілити центри по вертикалі
+	Distribute Left	Розподілити за лівим краєм
+	Distribute Right	Розподілити за правим краєм
+	Distribute Top	Розподілити за верхнім краєм
+	Print Shop	Друкарня
+	Step and Repeat	Крок і повтор
+	Click: fill · Right-click: stroke	Клік: заливка · Правий клік: обведення
+	Add Cut Contour…	Додати контур різання…
+	Step and Repeat…	Крок і повтор…
