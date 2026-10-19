@@ -359,7 +359,7 @@ fn outline_line(s: &mut Session, roots: &[NodeId], offset: f64) -> Result<NodeId
     // Type is cut along its glyphs.
     let has_type = {
         let d = &s.doc()?.doc;
-        copies.iter().any(|id| d.node(NodeId(*id)).is_some_and(|n| contains_type(n)))
+        copies.iter().any(|id| d.node(NodeId(*id)).is_some_and(contains_type))
     };
     if has_type {
         s.execute("select.set", &json!({ "ids": copies }))?;
