@@ -331,6 +331,10 @@ pub struct UiState {
     #[serde(default)]
     pub toolbar_pos: Option<[f32; 2]>,
     pub status_bar: bool,
+    /// Window › Color Palette: the column of swatch chips at the window's right edge
+    /// ([`crate::color_strip`]).
+    #[serde(default)]
+    pub color_strip: bool,
     pub dock: bool,
     /// The bars that Tab (`window.dock`) hid, which the next Tab shows again; none when Tab has not
     /// hidden them since it last showed them, or a workspace was applied since.
@@ -746,6 +750,7 @@ impl Default for UiState {
             docking_generation: 0,
             toolbar_pos: None,
             status_bar: true,
+            color_strip: false,
             dock: true,
             tab_hid: None,
             view: ViewFlags::default(),

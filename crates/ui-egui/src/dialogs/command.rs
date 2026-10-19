@@ -14,12 +14,24 @@ pub(super) const SPEC: DialogSpec = DialogSpec {
     body: |app, ui, d| {
         let command = d.str("__command");
         let lengths = lengths(&command);
-        form::param_fields(ui, d, &|k| lengths.contains(&k), &|k| choices(&command, k), &|_| 0, app.session.general_unit());
+        form::param_fields(ui, d, &|k| lengths.contains(&k), &|k| choices(&command, k), &|k| rank(&command, k), app.session.general_unit());
         false
     },
     confirm,
     ..DialogSpec::FORM
 };
+
+/// Where a field shows (lower first; fields of one rank by name): Step and Repeat's copies, then
+/// each axis's mode, distance and direction.
+fn rank(command: &str, key: &str) -> usize {
+    match command {
+        "printshop.stepAndRepeat" => {
+            ["copies", "hMode", "hDistance", "hDirection", "vMode", "vDistance", "vDirection"].iter().position(|k| *k == key).unwrap_or(9)
+        }
+        "printshop.cutContour" => ["shape", "offset", "radius", "weight", "name"].iter().position(|k| *k == key).unwrap_or(9),
+        _ => 0,
+    }
+}
 
 /// The parameters of the commands this dialog edits that are distances.
 fn lengths(command: &str) -> &'static [&'static str] {
@@ -30,6 +42,8 @@ fn lengths(command: &str) -> &'static [&'static str] {
         "object.repeat.options" => &["radius", "hSpacing", "vSpacing"],
         "text.areaOptions" => &["width", "height", "gutter", "inset", "firstBaselineMin"],
         "type.pathOptions" => &["spacing"],
+        "printshop.stepAndRepeat" => &["hDistance", "vDistance"],
+        "printshop.cutContour" => &["offset", "radius", "weight"],
         _ => &[],
     }
 }
@@ -48,9 +62,21 @@ fn choices(command: &str, key: &str) -> Option<form::Choices> {
         ("graph.setType", "pieLegend") => Some(PIE_LEGEND),
         ("graph.setType", "piePosition") => Some(PIE_POSITION),
         ("graph.setType", "pieSort") => Some(PIE_SORT),
+        ("printshop.stepAndRepeat", "hMode" | "vMode") => Some(STEP_MODE),
+        ("printshop.stepAndRepeat", "hDirection") => Some(STEP_H_DIRECTION),
+        ("printshop.stepAndRepeat", "vDirection") => Some(STEP_V_DIRECTION),
+        ("printshop.cutContour", "shape") => Some(CUT_SHAPE),
         _ => None,
     }
 }
+
+/// Step and Repeat › Mode, per axis.
+const STEP_MODE: form::Choices = &[("No Offset", "none"), ("Offset", "offset"), ("Spacing Between Objects", "spacing")];
+/// Step and Repeat › Direction (Spacing between objects).
+const STEP_H_DIRECTION: form::Choices = &[("Right", "right"), ("Left", "left")];
+const STEP_V_DIRECTION: form::Choices = &[("Down", "down"), ("Up", "up")];
+/// Add Cut Contour › Shape.
+const CUT_SHAPE: form::Choices = &[("Along the Outline", "outline"), ("Box", "box")];
 
 /// Type on a Path Options › Align to Path.
 const PATH_ALIGN: form::Choices = &[("Ascender", "ascender"), ("Descender", "descender"), ("Center", "center"), ("Baseline", "baseline")];

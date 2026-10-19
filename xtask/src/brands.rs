@@ -31,6 +31,8 @@ const DENY: &[&str] = &[
     "myriad",
     "pantone",
     "aicb",
+    "corel",
+    "coreldraw",
 ];
 
 /// Marks a line that keeps a legacy name on purpose.

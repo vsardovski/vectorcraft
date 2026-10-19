@@ -716,6 +716,18 @@ pub fn status_bar(app: &mut VectorcraftApp, ui: &mut Ui) {
                     .unwrap_or("");
                 ui.label(egui::RichText::new(tool).size(11.5).color(t.text_dim));
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+                    // With the color palette shown (the Print Shop workspace), the selection's fill
+                    // and stroke sit at the right end, where print-shop operators read them.
+                    if app.ui.color_strip {
+                        let (fill, stroke) = crate::panels::current_paints(app);
+                        for (paint, label) in [(&stroke, tl!("Stroke")), (&fill, tl!("Fill"))] {
+                            let (rect, r) = ui.allocate_exact_size(egui::vec2(14.0, 14.0), egui::Sense::hover());
+                            widgets::swatch_tile(ui, rect, paint, false, false);
+                            r.on_hover_text(format!("{label}: {}", paint.label()));
+                            ui.label(egui::RichText::new(label).size(11.0).color(t.text_dim));
+                        }
+                        ui.separator();
+                    }
                     ui.label(
                         egui::RichText::new(format!(
                             "{} {:.1} ms · {} {:.1} ms · {:.0} fps",

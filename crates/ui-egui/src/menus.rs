@@ -272,6 +272,12 @@ pub const UI_COMMANDS: &[(&str, &str, &str, &str)] = &[
     ),
     ("view.rotateReset", "Reset Rotate View", "Cmd+Shift+1", "{}"),
     ("window.control", "Control", "", "{}"),
+    (
+        "window.colorPalette",
+        "Color Palette",
+        "",
+        "{} show or hide the column of swatch chips at the window's right edge (click: fill, right-click: stroke)",
+    ),
     ("window.toolbar", "Tools", "", "{}"),
     (
         "window.toolbarColumns",
@@ -1335,6 +1341,7 @@ pub fn run_ui_command(app: &mut VectorcraftApp, id: &str, p: &Value) -> Option<R
             Ok(Value::Null)
         }
         "window.control" => flag(&mut app.ui.control_bar),
+        "window.colorPalette" => flag(&mut app.ui.color_strip),
         "window.toolbar" => flag(&mut app.ui.toolbar),
         "window.toolbarColumns" => opt_bool(p, "double").map(|on| {
             let on = on.unwrap_or(!app.ui.toolbar_double);
@@ -1774,6 +1781,7 @@ pub fn checked(app: &VectorcraftApp, id: &str, p: &Value) -> Option<bool> {
         // a document no item is checked.
         "view.rotate" => app.view().zip(p.get("angle").and_then(Value::as_f64)).is_some_and(|(view, a)| (view.rotation - a).abs() < 1e-9),
         "window.control" => app.ui.control_bar,
+        "window.colorPalette" => app.ui.color_strip,
         "window.toolbar" => app.ui.toolbar,
         "window.toolbarAdvanced" => app.ui.toolbar_advanced,
         "window.toolbarColumns" => app.ui.toolbar_double,
@@ -2329,6 +2337,53 @@ fn selected_image(app: &VectorcraftApp, keep: impl Fn(&vectorcraft_doc::ImageObj
 /// `menu_bar`); the native Mac bar is composed from the whole tree (see `native_menu`).
 /// `english_names` is Preferences › Type › Show Font Names in English (the Type → Font labels
 /// follow it; tests use the default `true`).
+/// The dialog a Print Shop command opens from its menu item or a key with no params: (heading, the
+/// fields it opens on). Step and Repeat starts on five copies side by side, touching; Add Cut
+/// Contour on a hairline along the outline.
+pub(crate) fn print_shop_dialog(id: &str) -> Option<(&'static str, Value)> {
+    Some(match id {
+        "printshop.stepAndRepeat" => (
+            "Step and Repeat",
+            json!({"copies": 5, "hMode": "spacing", "hDistance": 0, "hDirection": "right", "vMode": "none", "vDistance": 0, "vDirection": "down"}),
+        ),
+        "printshop.cutContour" => ("Add Cut Contour", json!({"shape": "outline", "offset": 0, "radius": 0, "weight": 0.25, "name": "CutContour"})),
+        _ => return None,
+    })
+}
+
+/// Object › Print Shop: the Тонекс edition's sign-making commands.
+fn print_shop_items() -> Vec<Item> {
+    let dialog = |label: &'static str, id: &'static str| cp(label, id, print_shop_dialog(id).map(|(_, f)| f).unwrap_or(Value::Null));
+    vec![
+        dialog("Step and Repeat…", "printshop.stepAndRepeat"),
+        dialog("Add Cut Contour…", "printshop.cutContour"),
+        Sep,
+        c("Convert to Curves", "printshop.convertToCurves"),
+        c("Combine", "object.compoundPath.make"),
+        c("Break Apart", "object.compoundPath.release"),
+        Sep,
+        sub(
+            "Align and Distribute",
+            vec![
+                c("Align Left", "printshop.align.left"),
+                c("Align Right", "printshop.align.right"),
+                c("Align Top", "printshop.align.top"),
+                c("Align Bottom", "printshop.align.bottom"),
+                c("Align Centers Vertically", "printshop.align.centerHorizontal"),
+                c("Align Centers Horizontally", "printshop.align.centerVertical"),
+                c("Center to Page", "printshop.centerToPage"),
+                Sep,
+                c("Distribute Left", "printshop.distribute.left"),
+                c("Distribute Right", "printshop.distribute.right"),
+                c("Distribute Top", "printshop.distribute.top"),
+                c("Distribute Bottom", "printshop.distribute.bottom"),
+                c("Distribute Centers Horizontally", "printshop.distribute.centerHorizontal"),
+                c("Distribute Centers Vertically", "printshop.distribute.centerVertical"),
+            ],
+        ),
+    ]
+}
+
 pub fn menu_tree() -> Vec<(&'static str, Vec<Item>)> {
     menu_tree_named(true)
 }
@@ -2682,6 +2737,8 @@ pub fn menu_tree_named(english_names: bool) -> Vec<(&'static str, Vec<Item>)> {
                     ],
                 ),
                 Sep,
+                sub("Print Shop", print_shop_items()),
+                Sep,
                 sub("Plug-ins", crate::dialogs::plugin::object_menu()),
             ],
         ),
@@ -2918,6 +2975,7 @@ pub fn menu_tree_named(english_names: bool) -> Vec<(&'static str, Vec<Item>)> {
                 sub("Arrange", vec![todo("Cascade"), todo("Tile"), todo("Float in Window"), todo("Consolidate All Windows")]),
                 sub("Workspace", crate::workspaces::menu_items()),
                 Sep,
+                c("Color Palette", "window.colorPalette"),
                 c("Control", "window.control"),
                 c("Contextual Task Bar", "window.taskBar"),
                 c("Tools", "window.toolbar"),
@@ -3436,6 +3494,13 @@ pub fn invoke(app: &mut VectorcraftApp, id: &str, p: Value) {
         && let Some((kind, fields)) = menu_dialog(app, id)
     {
         app.ui.dialog = Some(crate::state::Dialog::new(kind, fields));
+        return;
+    }
+    // Step and Repeat and Add Cut Contour by their keys: the dialog their menu items open.
+    if p.as_object().is_none_or(|o| o.is_empty())
+        && let Some((label, fields)) = print_shop_dialog(id)
+    {
+        invoke(app, "ui.paramDialog", json!({"command": id, "label": label, "params": fields}));
         return;
     }
     // Envelope Distort: Warp Options, Envelope Mesh and Envelope Options, from the selection.

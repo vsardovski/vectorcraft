@@ -64,6 +64,7 @@ pub mod prefscmds;
 pub mod print;
 pub(crate) mod printadvanced;
 pub mod printpresets;
+mod printshop;
 pub mod printtiling;
 pub mod rasterfx;
 mod recolor;
@@ -227,6 +228,7 @@ pub fn command_specs() -> &'static [CommandSpec] {
         v.extend(layerpanel::specs());
         v.extend(draw2::specs());
         v.extend(xform::specs());
+        v.extend(printshop::specs());
         v.extend(effectcmd::specs());
         v.extend(pathops::specs());
         v.extend(typecmd::specs());

@@ -18,6 +18,7 @@ mod brand;
 pub mod canvas;
 pub mod chrome;
 mod clipboard_probe;
+pub mod color_strip;
 pub mod community;
 pub mod control;
 pub mod credits;
@@ -115,6 +116,8 @@ mod tests_place;
 mod tests_plugins;
 #[cfg(test)]
 mod tests_printps;
+#[cfg(test)]
+mod tests_printshop;
 #[cfg(test)]
 mod tests_printtiling;
 #[cfg(test)]
@@ -1448,6 +1451,10 @@ impl VectorcraftApp {
             toolbar::show(self, ui);
         }
         panels::library_panel::tidy(self);
+        // Outside the dock, at the window's right edge.
+        if self.ui.color_strip && self.ui.screen_mode < 3 {
+            color_strip::show(self, ui);
+        }
         if self.ui.dock && self.ui.screen_mode < 3 {
             dock::show(self, ui);
         }

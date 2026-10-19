@@ -27,6 +27,8 @@ pub struct Workspace {
     pub dock_collapsed: bool,
     pub open_panel: Option<String>,
     pub status_bar: bool,
+    /// The color palette at the right edge (built-in workspaces: only Print Shop).
+    pub color_strip: bool,
     /// Tool groups torn off the toolbar into floating strips (built-in workspaces: none).
     pub floating_flyouts: Vec<FloatingFlyout>,
     /// Panels dragged out of the dock, where they float (built-in workspaces: none).
@@ -51,6 +53,8 @@ impl Default for Workspace {
 }
 
 pub const ESSENTIALS: &str = "Essentials";
+/// The Тонекс edition's workspace (see [`builtins`]).
+pub const PRINT_SHOP: &str = "Print Shop";
 
 /// Built-in workspaces, in Illustrator's menu order (Essentials first).
 pub fn builtins() -> Vec<Workspace> {
@@ -87,6 +91,18 @@ pub fn builtins() -> Vec<Workspace> {
             x.toolbar_advanced = true;
             x.toolbar_double = true;
             x.open_panel = Some("brushes".into());
+        }),
+        // The Тонекс edition's layout for sign-making: the Control bar as the property bar, rulers,
+        // the Advanced toolbar in one column, Layers in the dock and the color palette at the right
+        // edge.
+        w(PRINT_SHOP, &|x| {
+            x.control_bar = true;
+            x.rulers = true;
+            x.toolbar_advanced = true;
+            x.toolbar_double = false;
+            x.task_bar = false;
+            x.dock_tab = DockTab::Layers;
+            x.color_strip = true;
         }),
         w("Printing and Proofing", &|x| {
             x.control_bar = true;
@@ -134,6 +150,7 @@ pub fn capture(ui: &UiState, name: &str) -> Workspace {
         dock_collapsed: ui.dock_collapsed,
         open_panel: ui.open_panel.clone(),
         status_bar: ui.status_bar,
+        color_strip: ui.color_strip,
         floating_flyouts: ui.floating_flyouts.clone(),
         floating_panels: ui.floating_panels.clone(),
         docking: ui.docking.clone(),
@@ -157,6 +174,7 @@ pub fn apply(ui: &mut UiState, w: &Workspace) {
     ui.dock_collapsed = w.dock_collapsed;
     ui.open_panel = w.open_panel.clone();
     ui.status_bar = w.status_bar;
+    ui.color_strip = w.color_strip;
     ui.floating_flyouts = w.floating_flyouts.clone();
     ui.floating_panels = w.floating_panels.clone();
     ui.docking_generation = ui.docking_generation.wrapping_add(1);

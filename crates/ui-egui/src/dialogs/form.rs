@@ -442,6 +442,13 @@ pub(crate) fn humanize(k: &str) -> String {
     }
     match s.as_str() {
         "Dx" => "Horizontal".into(),
+        // Step and Repeat's flat fields.
+        "H Mode" => "Horizontal:".into(),
+        "H Distance" => "Horizontal Distance:".into(),
+        "H Direction" => "Horizontal Direction:".into(),
+        "V Mode" => "Vertical:".into(),
+        "V Distance" => "Vertical Distance:".into(),
+        "V Direction" => "Vertical Direction:".into(),
         "Dy" => "Vertical".into(),
         "Sx" => "Horizontal %".into(),
         "Sy" => "Vertical %".into(),

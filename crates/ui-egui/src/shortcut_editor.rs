@@ -17,7 +17,81 @@ use crate::state::{Dialog, UiState};
 use crate::theme::{self, Tokens};
 use crate::{VectorcraftApp, menus, widgets};
 
-pub const PRESETS: &[&str] = &["VectorCraft Defaults", "Classic Defaults"];
+pub const PRESETS: &[&str] = &["VectorCraft Defaults", "Classic Defaults", PRINT_SHOP];
+/// The Тонекс edition's set: the keys print-shop operators know from the reference sign-making
+/// app, after its public list of default shortcuts
+/// (https://community.coreldraw.com/collaborate/w/howto/8/complete-list-of-keyboard-shortcuts).
+pub const PRINT_SHOP: &str = "Print Shop Defaults";
+
+/// The bindings of [`PRINT_SHOP`] (entry key, chord), applied in order over the registry
+/// defaults; every entry that used one of these chords loses it.
+pub const PRINT_SHOP_KEYS: &[(&str, &str)] = &[
+    // Tools.
+    ("tool:pencil", "F5"),
+    ("tool:rectangle", "F6"),
+    ("tool:ellipse", "F7"),
+    ("tool:type", "F8"),
+    ("tool:directSelection", "F10"),
+    ("tool:polygon", "Y"),
+    ("tool:spiral", "A"),
+    ("tool:eraser", "X"),
+    ("tool:hand", "H"),
+    ("tool:zoom", "Z"),
+    ("tool:gradient", "G"),
+    ("tool:mesh", "M"),
+    ("tool:paintbrush", "I"),
+    ("tool:rectangularGrid", "D"),
+    // Align and Distribute.
+    ("printshop.align.left", "L"),
+    ("printshop.align.right", "R"),
+    ("printshop.align.top", "T"),
+    ("printshop.align.bottom", "B"),
+    ("printshop.align.centerHorizontal", "C"),
+    ("printshop.align.centerVertical", "E"),
+    ("printshop.centerToPage", "P"),
+    ("printshop.distribute.left", "Shift+L"),
+    ("printshop.distribute.right", "Shift+R"),
+    ("printshop.distribute.top", "Shift+T"),
+    ("printshop.distribute.bottom", "Shift+B"),
+    ("printshop.distribute.centerHorizontal", "Shift+E"),
+    ("printshop.distribute.centerVertical", "Shift+C"),
+    // Arrange.
+    ("object.compoundPath.make", "Cmd+L"),
+    ("object.compoundPath.release", "Cmd+K"),
+    ("printshop.convertToCurves", "Cmd+Q"),
+    ("object.path.outlineStroke", "Cmd+Shift+Q"),
+    ("object.ungroup", "Cmd+U"),
+    ("object.clippingMask.make", "Cmd+1"),
+    ("object.arrange.bringForward", "Cmd+PageUp"),
+    ("object.arrange.sendBackward", "Cmd+PageDown"),
+    ("object.arrange.bringToFront", "Shift+PageUp"),
+    ("object.arrange.sendToBack", "Shift+PageDown"),
+    // Edit.
+    ("edit.duplicate", "Cmd+D"),
+    ("object.transformAgain", "Cmd+R"),
+    ("printshop.stepAndRepeat", "Cmd+Shift+D"),
+    ("edit.preferences", "Cmd+J"),
+    // File.
+    ("file.place", "Cmd+I"),
+    ("file.exportAs", "Cmd+E"),
+    ("app.quit", "Alt+F4"),
+    // View.
+    ("view.zoomOut", "F3"),
+    ("view.fitAll", "F4"),
+    ("view.fitArtboard", "Shift+F4"),
+    ("view.presentation", "F9"),
+    ("view.outline", "Shift+F9"),
+    ("view.snapToGrid", "Cmd+Y"),
+    ("view.snapToPoint", "Alt+Z"),
+    ("view.smartGuides", "Alt+Shift+D"),
+    // Panels (the reference app's dockers and fill and outline dialogs).
+    ("panel:gradient", "F11"),
+    ("panel:color", "Shift+F11"),
+    ("panel:stroke", "F12"),
+    ("panel:transform", "Alt+F7"),
+    ("panel:graphicStyles", "Cmd+F5"),
+    ("panel:symbols", "Cmd+F3"),
+];
 pub const CUSTOM: &str = "Custom";
 /// Set names earlier versions saved: (old name, current name).
 pub const LEGACY_PRESETS: &[(&str, &str)] = &[("Illustrator Defaults", "Classic Defaults")]; // brand-ok: legacy preference value
@@ -278,7 +352,9 @@ pub fn entries() -> &'static [Entry] {
             is_tool: false,
         }));
         for (id, label, sc, params) in menus::UI_COMMANDS {
-            if !seen.insert(id) || (sc.is_empty() && !params.starts_with("{}") && !params.starts_with("{path")) {
+            // The Print Shop set binds Export As, whose params are all optional too.
+            let bound = PRINT_SHOP_KEYS.iter().any(|(k, _)| k == id);
+            if !seen.insert(id) || (sc.is_empty() && !params.starts_with("{}") && !params.starts_with("{path") && !bound) {
                 continue;
             }
             v.push(Entry { key: id.to_string(), label: label.to_string(), group: id_group(id), is_tool: false });
@@ -373,9 +449,22 @@ pub fn reset_one(overrides: &mut BTreeMap<String, String>, key: &str) {
     overrides.remove(key);
 }
 
-/// Overrides of a preset (both presets are the registry defaults for now).
+/// Overrides of a preset: none for the two registry-default sets, [`PRINT_SHOP_KEYS`] for
+/// [`PRINT_SHOP`].
 pub fn preset(name: &str) -> Option<BTreeMap<String, String>> {
-    PRESETS.contains(&set_name(name)).then(BTreeMap::new)
+    let name = set_name(name);
+    if !PRESETS.contains(&name) {
+        return None;
+    }
+    let mut overrides = BTreeMap::new();
+    if name == PRINT_SHOP {
+        for (key, chord) in PRINT_SHOP_KEYS {
+            // A binding the registry can't take (a renamed command) is skipped, not fatal: the
+            // rest of the set still applies. The tests check that every one is taken.
+            let _ = assign(&mut overrides, key, Some(chord), true);
+        }
+    }
+    Some(overrides)
 }
 
 /// Export format: `{"format": "vectorcraft-shortcuts", "set": name, "overrides": {...}}`.

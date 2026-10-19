@@ -529,6 +529,16 @@ pub fn handle(app: &mut VectorcraftApp, ctx: &egui::Context) {
         }
         return;
     }
+    // Tools on function keys (the Print Shop set's F5 Pencil, F6 Rectangle…): these keys type no
+    // text, so the single-key loop below never sees them. A key no tool takes is left alone.
+    for k in FUNCTION_KEYS {
+        if let Some(t) = crate::shortcut_editor::tool_for_key(k.name())
+            && ctx.input_mut(|i| i.consume_key(Modifiers::NONE, k))
+        {
+            app.select_tool(t);
+            return;
+        }
+    }
     // Arrow nudges (Shift = ×10, Alt = copy).
     let arrows = [(Key::ArrowLeft, -1.0, 0.0), (Key::ArrowRight, 1.0, 0.0), (Key::ArrowUp, 0.0, -1.0), (Key::ArrowDown, 0.0, 1.0)];
     for (k, dx, dy) in arrows {
@@ -578,6 +588,9 @@ pub fn handle(app: &mut VectorcraftApp, ctx: &egui::Context) {
         }
     }
 }
+
+/// The function keys a tool shortcut may use.
+const FUNCTION_KEYS: [Key; 12] = [Key::F1, Key::F2, Key::F3, Key::F4, Key::F5, Key::F6, Key::F7, Key::F8, Key::F9, Key::F10, Key::F11, Key::F12];
 
 /// The second press of Escape pressed twice comes less than this many seconds after the first.
 const ESCAPE_PAIR_SECONDS: f64 = 1.0;
