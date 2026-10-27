@@ -1,4 +1,4 @@
-# VectorCraft – издание за Тонекс 2000 ЕООД
+# VectorCraft – издание „Експрес Принт“ (Тонекс 2000 ЕООД)
 
 Векторен редактор (на база отворения код VectorCraft, лиценз MIT OR Apache-2.0) с добавен модул
 **Печатница** за предпечат, рязане и оферти.
@@ -48,14 +48,14 @@ vectorcraft-cli run --in klient.pdf --cmd printshop.preflight --params "{\"profi
 
 ## Изграждане за Windows
 
-**Най-лесно (GitHub):** в хранилището → Actions → *Tonex Windows build* → *Run workflow*. След
-~30–60 мин. от страницата на изпълнението се сваля `vectorcraft-tonex-windows-x64.zip`.
+**Най-лесно (GitHub):** в хранилището → Actions → *Express Print Windows build* → *Run workflow*. След
+~30–60 мин. от страницата на изпълнението се сваля `vectorcraft-expressprint-windows-x64.zip`.
 Разархивира се в папка и се стартира `vectorcraft.exe` (преносима версия – без инсталация).
 
 **Ръчно на Windows** (Rust + Visual Studio Build Tools):
 
 ```
-set VECTORCRAFT_EDITION=Тонекс 2000
+set VECTORCRAFT_EDITION=Експрес Принт
 cargo build --release -p vectorcraft -p vectorcraft-cli
 ```
 
@@ -64,7 +64,7 @@ cargo build --release -p vectorcraft -p vectorcraft-cli
 
 ## Обновяване от основния проект
 
-Промените за Тонекс са изолирани, за да се слива лесно с новите версии на VectorCraft:
+Промените за Експрес Принт са изолирани, за да се слива лесно с новите версии на VectorCraft:
 `crates/engine/src/cmd/printshop.rs`, `crates/ui-egui/src/panels/print_shop.rs`,
 `crates/ui-egui/src/brand.rs` (издание), по един ред в регистрите на команди/панели/меню и по два
 реда преводи в `crates/ui-egui/src/i18n/*.tsv`.
