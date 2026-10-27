@@ -4815,3 +4815,10 @@ lighting	Light	Свет
 	Minimum	Минимум
 	Justification	Выключка
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	переменные и наборы данных файла не прочитаны (переменных: {variables}, наборов данных: {data_sets}): панель «Переменные» их не показывает
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Типография
+	Make Cut Contour	Создать контур резки
+	Preflight for Production…	Проверка для производства…
+	Cut Line Statistics	Статистика линий резки
+	Make Cut Contour…	Создать контур резки…
+	Production Profiles	Производственные профили

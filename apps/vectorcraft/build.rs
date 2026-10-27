@@ -8,12 +8,17 @@ fn main() -> Result<(), String> {
     println!("cargo:rerun-if-changed=build.rs");
     println!("cargo:rerun-if-changed=../../assets/app-icon/vectorcraft.ico");
     println!("cargo:rerun-if-env-changed=VECTORCRAFT_REQUIRE_WINRES");
+    println!("cargo:rerun-if-env-changed=VECTORCRAFT_EDITION");
     if std::env::var("CARGO_CFG_TARGET_OS").as_deref() != Ok("windows") {
         return Ok(());
     }
+    // A shop edition (`VECTORCRAFT_EDITION`, e.g. the Тонекс 2000 build) names itself in the
+    // file's properties too.
+    let edition = std::env::var("VECTORCRAFT_EDITION").ok().map(|e| e.trim().to_string()).filter(|e| !e.is_empty());
+    let product = edition.as_ref().map_or_else(|| "VectorCraft".to_string(), |e| format!("VectorCraft - {e}"));
     let mut res = winresource::WindowsResource::new();
     res.set_icon("../../assets/app-icon/vectorcraft.ico")
-        .set("ProductName", "VectorCraft")
+        .set("ProductName", &product)
         .set("FileDescription", "VectorCraft vector illustration editor")
         .set("CompanyName", "Learning Machines LLC")
         .set("LegalCopyright", "Copyright (c) the VectorCraft authors. MIT OR Apache-2.0.")

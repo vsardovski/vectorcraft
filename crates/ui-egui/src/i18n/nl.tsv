@@ -5231,3 +5231,10 @@ swatch	Bright Violet	Felviolet
 	Full Justify	Volledig uitvullen
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum mag niet groter zijn dan Gewenst, en Gewenst niet groter dan Maximum.
 	Justification	Uitvullen
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Drukkerij
+	Make Cut Contour	Snijcontour maken
+	Preflight for Production…	Preflight voor productie…
+	Cut Line Statistics	Statistieken van snijlijnen
+	Make Cut Contour…	Snijcontour maken…
+	Production Profiles	Productieprofielen

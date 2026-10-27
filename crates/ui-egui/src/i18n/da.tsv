@@ -5188,3 +5188,10 @@ swatch	Bright Violet	Kraftig violet
 	Full Justify	Lige margener
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum må ikke overstige Ønsket, og Ønsket ikke Maksimum.
 	Justification	Justering
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Trykkeri
+	Make Cut Contour	Opret skærekontur
+	Preflight for Production…	Forhåndskontrol til produktion…
+	Cut Line Statistics	Statistik for skærelinjer
+	Make Cut Contour…	Opret skærekontur…
+	Production Profiles	Produktionsprofiler

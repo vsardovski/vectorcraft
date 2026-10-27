@@ -5157,3 +5157,10 @@ effect	Points	Σημεία
 	Minimum must not exceed Desired, nor Desired Maximum.	Το ελάχιστο δεν πρέπει να υπερβαίνει το επιθυμητό, ούτε το επιθυμητό το μέγιστο.
 	Justification	Πλήρης στοίχιση
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	οι μεταβλητές και τα σύνολα δεδομένων του αρχείου δεν διαβάστηκαν (μεταβλητές: {variables}, σύνολα δεδομένων: {data_sets}): ο πίνακας Μεταβλητές δεν τα εμφανίζει
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Τυπογραφείο
+	Make Cut Contour	Δημιουργία περιγράμματος κοπής
+	Preflight for Production…	Προέλεγχος για παραγωγή…
+	Cut Line Statistics	Στατιστικά γραμμών κοπής
+	Make Cut Contour…	Δημιουργία περιγράμματος κοπής…
+	Production Profiles	Προφίλ παραγωγής

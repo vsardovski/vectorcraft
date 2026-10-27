@@ -5205,3 +5205,10 @@ mark-style	Japanese	Japonské
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum nesmí překročit požadovanou hodnotu ani požadovaná hodnota maximum.
 	Justification	Zarovnání do bloku
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	proměnné a sady dat souboru nebyly načteny (proměnné: {variables}, sady dat: {data_sets}): panel Proměnné je nezobrazuje
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Tiskárna
+	Make Cut Contour	Vytvořit ořezovou konturu
+	Preflight for Production…	Kontrola pro výrobu…
+	Cut Line Statistics	Statistika ořezových linií
+	Make Cut Contour…	Vytvořit ořezovou konturu…
+	Production Profiles	Výrobní profily

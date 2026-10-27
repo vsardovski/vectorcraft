@@ -5188,3 +5188,10 @@ swatch	Bright Violet	Violet cerah
 	Full Justify	Rata Penuh
 	Minimum must not exceed Desired, nor Desired Maximum.	Minimum tidak boleh melebihi Diinginkan, dan Diinginkan tidak boleh melebihi Maksimum.
 	Justification	Justifikasi
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Percetakan
+	Make Cut Contour	Buat Kontur Potong
+	Preflight for Production…	Pemeriksaan Awal untuk Produksi…
+	Cut Line Statistics	Statistik Garis Potong
+	Make Cut Contour…	Buat Kontur Potong…
+	Production Profiles	Profil Produksi

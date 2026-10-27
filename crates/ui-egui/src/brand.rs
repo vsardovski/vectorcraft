@@ -4,6 +4,24 @@
 
 use egui::{Color32, Context, Id, Rect, TextureHandle, TextureOptions, Ui, pos2};
 
+/// The shop edition this build was made for, from `VECTORCRAFT_EDITION` at build time (the
+/// Тонекс 2000 ЕООД build sets `Тонекс 2000`); `None` for the stock app.
+pub const EDITION: Option<&str> = option_env!("VECTORCRAFT_EDITION");
+
+/// The edition's name, when this is a shop edition (a blank value is the stock app).
+pub fn edition() -> Option<&'static str> {
+    EDITION.map(str::trim).filter(|e| !e.is_empty())
+}
+
+/// The app's name as the window and title bar show it: `VectorCraft`, or `VectorCraft · Тонекс
+/// 2000` in a shop edition.
+pub fn app_title() -> String {
+    match edition() {
+        Some(e) => format!("VectorCraft \u{00b7} {e}"),
+        None => "VectorCraft".into(),
+    }
+}
+
 /// 128 px: sharp at 44 pt on a 2× display, and the mipmaps keep 22 pt clean.
 const ICON_PNG: &[u8] = include_bytes!("../../../assets/app-icon/hicolor/128x128/apps/ai.storyteller.vectorcraft.png");
 

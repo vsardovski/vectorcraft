@@ -53,6 +53,10 @@ fn about_tab(app: &mut VectorcraftApp, ui: &mut egui::Ui) {
         crate::brand::paint_mark(ui, r);
         ui.vertical(|ui| {
             ui.label(egui::RichText::new("VectorCraft").font(theme::semibold(22.0)));
+            // A shop edition names the company it was built for (the name is shown as it is).
+            if let Some(e) = crate::brand::edition() {
+                ui.label(egui::RichText::new(e).font(theme::semibold(14.0)));
+            }
             ui.label(crate::i18n::fmt(
                 tl!("Version {version} — open-source vector illustration in pure Rust."),
                 &[("version", env!("CARGO_PKG_VERSION"))],

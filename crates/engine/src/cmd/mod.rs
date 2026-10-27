@@ -64,6 +64,7 @@ pub mod prefscmds;
 pub mod print;
 pub(crate) mod printadvanced;
 pub mod printpresets;
+pub mod printshop;
 pub mod printtiling;
 pub mod rasterfx;
 mod recolor;
@@ -261,6 +262,7 @@ pub fn command_specs() -> &'static [CommandSpec] {
         v.extend(distortcmds::specs());
         v.extend(paint::proxy_specs());
         v.extend(overprint::specs());
+        v.extend(printshop::specs());
         v.extend(swatchlib::specs());
         v.extend(freeform::specs());
         v.extend(flatten::specs());

@@ -4819,3 +4819,10 @@ lighting	Light	Luce
 	Minimum	Minimo
 	Justification	Giustificazione
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	le variabili e i set di dati del file non sono stati letti (variabili: {variables}, set di dati: {data_sets}): il pannello Variabili non li elenca
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Tipografia
+	Make Cut Contour	Crea contorno di taglio
+	Preflight for Production…	Verifica preliminare per la produzione…
+	Cut Line Statistics	Statistiche delle linee di taglio
+	Make Cut Contour…	Crea contorno di taglio…
+	Production Profiles	Profili di produzione

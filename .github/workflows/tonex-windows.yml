@@ -1,0 +1,47 @@
+# Тонекс 2000 ЕООД edition: a portable Windows x64 build with the Print Shop panel.
+#
+# Run by hand (Actions → "Tonex Windows build" → Run workflow). The zip it uploads holds
+# vectorcraft.exe, vectorcraft-cli.exe and portable.txt (settings stay next to the exe), so
+# colleagues unpack it to a folder and start vectorcraft.exe; no installer or admin rights.
+name: Tonex Windows build
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: "Edition name shown in the title bar and About"
+        default: "Тонекс 2000"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  windows-x64:
+    runs-on: windows-2022
+    timeout-minutes: 120
+    env:
+      VECTORCRAFT_EDITION: ${{ inputs.edition }}
+      RUSTFLAGS: "-C target-feature=+crt-static"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Test the print shop tools
+        run: cargo test -p vectorcraft-engine --lib printshop
+      - name: Build
+        run: cargo build --release -p vectorcraft -p vectorcraft-cli
+      - name: Package (portable zip)
+        shell: pwsh
+        run: |
+          $out = "dist/vectorcraft-tonex-windows-x64"
+          New-Item -ItemType Directory -Force $out | Out-Null
+          Copy-Item target/release/vectorcraft.exe, target/release/vectorcraft-cli.exe $out
+          Copy-Item packaging/windows/portable.txt $out
+          Copy-Item LICENSE-MIT, LICENSE-APACHE, NOTICE $out
+          Copy-Item docs/tonex.md "$out/README-Тонекс.md"
+          Compress-Archive -Path "$out/*" -DestinationPath "dist/vectorcraft-tonex-windows-x64.zip" -Force
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vectorcraft-tonex-windows-x64
+          path: dist/vectorcraft-tonex-windows-x64.zip

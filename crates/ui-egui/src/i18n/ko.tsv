@@ -4782,3 +4782,10 @@ lighting	Light	광원
 	Minimum	최소
 	Justification	양끝 맞춤
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	파일의 변수와 데이터 세트를 읽지 않았습니다(변수: {variables}, 데이터 세트: {data_sets}). 변수 패널에 표시되지 않습니다
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	인쇄소
+	Make Cut Contour	칼선 만들기
+	Preflight for Production…	생산용 프리플라이트…
+	Cut Line Statistics	칼선 통계
+	Make Cut Contour…	칼선 만들기…
+	Production Profiles	생산 프로필

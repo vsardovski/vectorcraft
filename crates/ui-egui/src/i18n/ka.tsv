@@ -5112,3 +5112,10 @@ imageTrace	Outline	კონტური
 @msg	its zlib compression is damaged	მისი zlib შეკუმშვა დაზიანებულია
 @msg	its Zstandard compression is damaged	მისი Zstandard შეკუმშვა დაზიანებულია
 @msg	it decompresses to more than {_1} MB	გაშლისას {_1} MB-ს აღემატება
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	სტამბა
+	Make Cut Contour	ჭრის კონტურის შექმნა
+	Preflight for Production…	წარმოებისთვის წინასწარი შემოწმება…
+	Cut Line Statistics	ჭრის ხაზების სტატისტიკა
+	Make Cut Contour…	ჭრის კონტურის შექმნა…
+	Production Profiles	წარმოების პროფილები

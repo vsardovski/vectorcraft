@@ -14,7 +14,7 @@ macro_rules! tl {
 }
 
 pub mod background;
-mod brand;
+pub mod brand;
 pub mod canvas;
 pub mod chrome;
 mod clipboard_probe;

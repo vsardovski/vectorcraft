@@ -4094,3 +4094,10 @@ lighting	Light	光源
 	Minimum must not exceed Desired, nor Desired Maximum.	最小值不可超過所需值，所需值不可超過最大值。
 	Minimum	最小值
 	Justification	對齊設定
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	印刷廠
+	Make Cut Contour	建立裁切輪廓
+	Preflight for Production…	生產預檢…
+	Cut Line Statistics	裁切線統計
+	Make Cut Contour…	建立裁切輪廓…
+	Production Profiles	生產設定檔

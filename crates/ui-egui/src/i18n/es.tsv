@@ -5147,3 +5147,10 @@ mark-style	Japanese	Japonesas
 	Minimum must not exceed Desired, nor Desired Maximum.	El mínimo no puede superar el deseado, ni el deseado el máximo.
 	Justification	Justificación
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	no se leyeron las variables ni los conjuntos de datos del archivo (variables: {variables}, conjuntos de datos: {data_sets}): el panel Variables no los muestra
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Imprenta
+	Make Cut Contour	Crear contorno de corte
+	Preflight for Production…	Verificación para producción…
+	Cut Line Statistics	Estadísticas de líneas de corte
+	Make Cut Contour…	Crear contorno de corte…
+	Production Profiles	Perfiles de producción

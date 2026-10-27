@@ -4799,3 +4799,10 @@ lighting	Light	Світло
 	Minimum	Мінімум
 	Justification	Вирівнювання за шириною
 @msg	the file's variables and data sets weren't read (variables: {variables}, data sets: {data_sets}): the Variables panel doesn't list them	змінні та набори даних файлу не прочитано (змінних: {variables}, наборів даних: {data_sets}): панель «Змінні» їх не показує
+# Print shop (Тонекс 2000): Window → Print Shop, and its undo step.
+	Print Shop	Друкарня
+	Make Cut Contour	Створити контур різання
+	Preflight for Production…	Перевірка для виробництва…
+	Cut Line Statistics	Статистика ліній різання
+	Make Cut Contour…	Створити контур різання…
+	Production Profiles	Виробничі профілі
